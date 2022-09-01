@@ -1,0 +1,14 @@
+_G.Enabled = true -- diw/theossiraptor
+
+while _G.Enabled do
+wait(1)
+local playerHead = game.Players.LocalPlayer.Character.Head
+
+for i, v in pairs(game:GetService("Workspace").Zones.HalfYear.Drops:GetDescendants()) do
+    if v.Name =="TouchInterest" and v.Parent then
+        firetouchinterest(playerHead, v.Parent, 0)
+        wait(0.01) -- set any cd
+        firetouchinterest(playerHead, v.Parent, 1)
+        end
+    end
+end
